@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+
+  h1 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  &__burger {
+    width: 50px;
+    height: 50px;
+  }
+
+  &__MainLogo {
+    width: 100px;
+    height: 90px;
+  }
+}
