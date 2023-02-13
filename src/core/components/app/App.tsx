@@ -14,7 +14,8 @@ const menuOptions: MenuOption[] = [
 function App() {
   return (
     <div className="App">
-      {/* <Header>
+      {/* TEMP: Hasta que estén hechos los componentes.
+      <Header>
         <Menu menuOptions={menuOptions}></Menu>
       </Header>
       <AppRouter menuOptions={menuOptions}></AppRouter> */}
