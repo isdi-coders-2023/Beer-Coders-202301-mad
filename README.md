@@ -104,7 +104,7 @@ Facilitamos a cualquier persona, esté donde esté, el disfrutar de la mejor exp
 
 A todas las personas que sepan apreciar la pasión y el cariño que esconden los productos Beers City, así como su impacto positivo en el planeta.
 
-## DELIVERING PASSION
+DELIVERING PASSION
 
 PERSONAS: Hay personas que se esfuerzan en poner toda su alma, cariño y cuidado a todo lo que hacen.
 
