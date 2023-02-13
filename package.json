@@ -22,7 +22,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "test:prod": "react-scripts test --watchAll --coverage --watchAll=false",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
@@ -47,5 +48,11 @@
       "<rootDir>/src/reportWebVitals.ts",
       "<rootDir>/src/index.ts"
     ]
+  },
+  "prettier": {
+    "singleQuote": true
+  },
+  "devDependencies": {
+    "husky": "^8.0.0"
   }
 }
