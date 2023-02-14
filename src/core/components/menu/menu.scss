@@ -1,0 +1,14 @@
+.menu {
+  display: none;
+}
+
+.burgerPic {
+  width: 50px;
+  height: 50px;
+}
+
+.container:hover {
+  .menu {
+    display: block;
+  }
+}
