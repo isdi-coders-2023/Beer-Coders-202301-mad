@@ -5,6 +5,10 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  overflow: visible;
+  margin-top: 0;
 }
 
 .footer-logo-title {
@@ -29,9 +33,6 @@
 .qlq {
   color: rgba(94, 127, 66, 1);
   font-size: 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 .container__footer .small-menu {
   display: flex;
