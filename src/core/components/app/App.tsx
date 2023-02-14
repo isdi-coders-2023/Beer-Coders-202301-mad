@@ -1,3 +1,5 @@
+import { Footer } from '../footer/footer';
+
 export type MenuOption = {
   label: string;
   path: string;
@@ -12,10 +14,10 @@ const menuOptions: MenuOption[] = [
 function App() {
   return (
     <div className="App">
-      <Header>
+      {/* <Header>
         <Menu menuOptions={menuOptions}></Menu>
       </Header>
-      <AppRouter menuOptions={menuOptions}></AppRouter>
+      <AppRouter menuOptions={menuOptions}></AppRouter> */}
       <Footer></Footer>
     </div>
   );

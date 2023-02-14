@@ -2,9 +2,9 @@ import './footer.scss';
 export function Footer() {
   return (
     <footer className="container__footer">
-      <div>
-        <div className="footer-title">
-          {' '}
+      <div className="footer-title">
+        {' '}
+        <div>
           <img
             src="./img/logo2-transparent.png"
             alt="logo"
@@ -12,40 +12,43 @@ export function Footer() {
             width="40px"
           />
           Beers City
-          <p className="title-small">
-            Copyright © Beers City 2020 All rights reserved
-          </p>
         </div>
+        <div></div>
+        <p className="title-small">
+          Copyright © Beers City 2020 All rights reserved
+        </p>
       </div>
-      <ul>
-        <li className="small-menu">Contac Info</li>
-        <li className="menu-list">+123 456 789</li>
-        <li className="menu-list">Info@BeersCity.com</li>
-        <li className="menu-list">1245, Madrid, Spain</li>
-      </ul>
-      <div className="qlq" />
 
-      <p className="small-menu">Follow us on</p>
+      <div className="small-menu">
+        <span>Contact Info</span>
+        <span>+123 456 789</span>
+        <span>Info@BeersCity.com</span>
+        <span>1245, Madrid, Spain</span>
+      </div>
 
-      <div className="list-logo" />
-      <img
-        src="./img/facebook-green.png"
-        alt="facebook"
-        width="30px"
-        height="30px"
-      />
-      <img
-        src="./img/instagram-green.png"
-        alt="instagram"
-        width="30px"
-        height="30px"
-      />
-      <img
-        src="./img/twitter-green.png"
-        alt="Twitter"
-        width="30px"
-        height="30px"
-      />
+      <div className="small-menu">
+        <p>Follow us on</p>
+      </div>
+      <div className="list-logo">
+        <img
+          src="./img/facebook-green.png"
+          alt="facebook"
+          width="15px"
+          height="30px"
+        />
+        <img
+          src="./img/instagram-green.png"
+          alt="instagram"
+          width="15px"
+          height="30px"
+        />
+        <img
+          src="./img/twitter-green.png"
+          alt="Twitter"
+          width="15px"
+          height="30px"
+        />
+      </div>
     </footer>
   );
 }
