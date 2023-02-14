@@ -1,3 +1,4 @@
+import { Footer } from '../footer/footer';
 import { Header } from '../header/header';
 import { Menu } from '../menu/menu';
 
@@ -18,8 +19,8 @@ function App() {
       <Header>
         <Menu menuOptions={menuOptions}></Menu>
       </Header>
-      {/* <AppRouter menuOptions={menuOptions}></AppRouter>
-      <Footer></Footer> */}
+      {/* TEMP: Hasta que estén hechos los componentes.<AppRouter menuOptions={menuOptions}></AppRouter> */}
+      <Footer></Footer>
     </div>
   );
 }

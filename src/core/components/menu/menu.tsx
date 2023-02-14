@@ -10,8 +10,12 @@ export function Menu({ menuOptions }: MenuProps) {
   return (
     <>
       <div className="container">
-        <a href="#">
-          <img className="burgerPic" src="./img/burger-menu.png" alt=""></img>
+        <a href="#" className="burgerA">
+          <img
+            className="burgerImg"
+            src="./img/burger-menu.png"
+            alt="Burger menu logo"
+          ></img>
         </a>
         <ul className="menu">
           {menuOptions.map((option) => (
