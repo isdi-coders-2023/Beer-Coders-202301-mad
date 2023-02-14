@@ -16,9 +16,9 @@ function App() {
   return (
     <div className="App">
       {/* TEMPORAL:
-       <Header>
-        <Menu menuOptions={menuOptions}></Menu>
-      </Header> */}
+        <Header>
+          <Menu menuOptions={menuOptions}></Menu>
+        </Header> */}
       <AppRouter menuOptions={menuOptions}></AppRouter>
       <Footer></Footer>
     </div>
