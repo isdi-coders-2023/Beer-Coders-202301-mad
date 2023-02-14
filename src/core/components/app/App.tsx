@@ -1,5 +1,7 @@
 import { AppRouter } from '../app.router/app.router';
 import { Footer } from '../footer/footer';
+import { Header } from '../header/header';
+import { Menu } from '../menu/menu';
 
 export type MenuOption = {
   label: string;
@@ -15,10 +17,9 @@ const menuOptions: MenuOption[] = [
 function App() {
   return (
     <div className="App">
-      {/* TEMPORAL:
         <Header>
           <Menu menuOptions={menuOptions}></Menu>
-        </Header> */}
+        </Header>
       <AppRouter menuOptions={menuOptions}></AppRouter>
       <Footer></Footer>
     </div>

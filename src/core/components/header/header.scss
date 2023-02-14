@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+
+  h1 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  &__MainLogo {
+    width: 100px;
+    height: 90px;
+  }
+}
+
+@media (min-width: 700px) {
+  h1 {
+    padding: 3rem;
+  }
+  .header {
+    background-color: #cdf2ad;
+    justify-content: flex-start;
+  }
+}
