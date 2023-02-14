@@ -11,8 +11,8 @@ describe('Given App component', () => {
     test('Then it should call Header, AppRouter and Footer components', () => {
       render(<App />);
 
-      //TEMPO: expect(Header).toHaveBeenCalled();
-      //TEMP: expect(AppRouter).toHaveBeenCalled();
+      //TEMPORAL: expect(Header).toHaveBeenCalled();
+      //TEMPORAL: expect(AppRouter).toHaveBeenCalled();
       expect(Footer).toHaveBeenCalled();
     });
   });
