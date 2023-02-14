@@ -1,19 +1,18 @@
+/* eslint-disable jsx-a11y/anchor-has-content */
 import './footer.scss';
 export function Footer() {
   return (
     <footer className="container__footer">
       <div className="footer-title">
-        {' '}
-        <div>
-          <img
-            src="./img/logo2-transparent.png"
-            alt="logo"
-            height="30px"
-            width="40px"
-          />
-          Beers City
-        </div>
-        <div></div>
+        <img
+          src="./img/logo2-transparent.png"
+          alt="logo"
+          height="60px"
+          width="70px"
+        />
+      </div>
+      <div className="footer-title2">
+        Beers City
         <p className="title-small">
           Copyright © Beers City 2020 All rights reserved
         </p>
@@ -26,28 +25,31 @@ export function Footer() {
         <span>1245, Madrid, Spain</span>
       </div>
 
-      <div className="small-menu">
-        <p>Follow us on</p>
-      </div>
-      <div className="list-logo">
-        <img
-          src="./img/facebook-green.png"
-          alt="facebook"
-          width="15px"
-          height="30px"
-        />
-        <img
-          src="./img/instagram-green.png"
-          alt="instagram"
-          width="15px"
-          height="30px"
-        />
-        <img
-          src="./img/twitter-green.png"
-          alt="Twitter"
-          width="15px"
-          height="30px"
-        />
+      <div className="qlq">
+        Follow us on
+        <div className="list-logo">
+          <a href="https://www.instagram.com/"></a>
+          <img
+            src="./img/instagram-green.png"
+            alt="instagram"
+            width="30px"
+            height="30px"
+          />
+          <a href="https://twitter.com/?lang=es"></a>
+          <img
+            src="./img/twitter-green.png"
+            alt="Twitter"
+            width="30px"
+            height="30px"
+          />
+          <a href="https://es-es.facebook.com/"></a>
+          <img
+            src="./img/facebook-green.png"
+            alt="Facebook"
+            width="30px"
+            height="30px"
+          />
+        </div>
       </div>
     </footer>
   );
