@@ -1,3 +1,4 @@
+import { AppRouter } from '../app.router/app.router';
 import { Footer } from '../footer/footer';
 
 export type MenuOption = {
@@ -5,21 +6,20 @@ export type MenuOption = {
   path: string;
 };
 
-// TEMPORAL:
-// const menuOptions: MenuOption[] = [
-//   { label: 'Home', path: '/home' },
-//   { label: 'My Beers', path: '/mybeers' },
-//   { label: 'About us', path: '/about' },
-// ];
+const menuOptions: MenuOption[] = [
+  { label: 'Home', path: '/home' },
+  { label: 'My Beers', path: '/mybeers' },
+  { label: 'About us', path: '/about' },
+];
 
 function App() {
   return (
     <div className="App">
-      {/* TEMP: Hasta que estén hechos los componentes.
-      <Header>
+      {/* TEMPORAL:
+       <Header>
         <Menu menuOptions={menuOptions}></Menu>
-      </Header>
-      <AppRouter menuOptions={menuOptions}></AppRouter> */}
+      </Header> */}
+      <AppRouter menuOptions={menuOptions}></AppRouter>
       <Footer></Footer>
     </div>
   );
