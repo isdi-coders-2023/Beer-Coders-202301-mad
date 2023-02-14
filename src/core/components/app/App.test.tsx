@@ -20,10 +20,10 @@ describe('Given App component', () => {
 
 // TEMPORAL APP ROUTER:
 
-// import { MemoryRouter as Router } from 'react-router-dom';
-// import { render, screen } from '@testing-library/react';
-// import { MenuOption } from '../app/App';
-// import { AppRouter } from './app.router';
+// TEMPORAL import { MemoryRouter as Router } from 'react-router-dom';
+// TEMPORAL import { render, screen } from '@testing-library/react';
+// TEMPORAL import { MenuOption } from '../app/App';
+// TEMPORAL import { AppRouter } from './app.router';
 
 // describe('Given AppRouter component', () => {
 //   const mockOptions: MenuOption[] = [

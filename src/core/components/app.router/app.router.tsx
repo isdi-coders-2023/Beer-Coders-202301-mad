@@ -1,7 +1,8 @@
 import { Suspense } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Routes } from 'react-router-dom';
 import { MenuOption } from '../app/App';
 
+// TEMPORAL: import { Route } from 'react-router-dom';
 // COMENTARIO TEMPORAL HASTA TERMINAR HOME, MY BEERS Y ABOUT.
 // const Home = lazy(() => import('../../../features/home/page/home'));
 // const MyBeers = lazy(() => import('../../../features/mybeers/page/mybeers'));
