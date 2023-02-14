@@ -1,3 +1,4 @@
+import { AppRouter } from '../app.router/app.router';
 import { Footer } from '../footer/footer';
 import { Header } from '../header/header';
 import { Menu } from '../menu/menu';
@@ -7,7 +8,7 @@ export type MenuOption = {
   path: string;
 };
 
-export const menuOptions: MenuOption[] = [
+const menuOptions: MenuOption[] = [
   { label: 'Home', path: '/home' },
   { label: 'My Beers', path: '/mybeers' },
   { label: 'About us', path: '/about' },
@@ -16,10 +17,10 @@ export const menuOptions: MenuOption[] = [
 function App() {
   return (
     <div className="App">
-      <Header>
-        <Menu menuOptions={menuOptions}></Menu>
-      </Header>
-      {/* TEMP: Hasta que estén hechos los componentes.<AppRouter menuOptions={menuOptions}></AppRouter> */}
+        <Header>
+          <Menu menuOptions={menuOptions}></Menu>
+        </Header>
+      <AppRouter menuOptions={menuOptions}></AppRouter>
       <Footer></Footer>
     </div>
   );
