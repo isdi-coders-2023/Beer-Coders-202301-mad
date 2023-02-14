@@ -1,11 +1,20 @@
 .container__footer {
   background-color: rgba(205, 242, 173, 1);
-  padding: 10px;
+  padding: 1rem;
   font-size: 12px;
   display: flex;
   flex-direction: row;
+
   justify-content: space-around;
   padding-bottom: 1em;
+
+  justify-content: space-between;
+}
+
+.footer-logo-title {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
 }
 
 .container__footer .footer-title2 {
@@ -45,16 +54,17 @@
   .footer-title {
     display: none;
   }
-  @media screen and (max-width: 700px) {
-    .footer-title2 {
-      display: none;
-    }
-    @media screen and (max-width: 700px) {
-      .title-small {
-        display: flex;
-        flex-direction: row;
-        align-content: space-between;
-      }
-    }
+  .footer-logo-title {
+    display: none;
+  }
+
+  .footer-title2 {
+    display: none;
+  }
+
+  .title-small {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
   }
 }

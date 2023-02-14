@@ -3,19 +3,21 @@ import './footer.scss';
 export function Footer() {
   return (
     <footer className="container__footer">
-      <div className="footer-title">
-        <img
-          src="./img/logo2-transparent.png"
-          alt="logo"
-          height="60px"
-          width="70px"
-        />
-      </div>
-      <div className="footer-title2">
-        Beers City
-        <p className="title-small">
-          Copyright © Beers City 2020 All rights reserved
-        </p>
+      <div className="footer-logo-title">
+        <div className="footer-title">
+          <img
+            src="./img/logo2-transparent.png"
+            alt="logo"
+            height="80px"
+            width="90px"
+          />
+        </div>
+        <div className="footer-title2">
+          Beers City
+          <p className="title-small">
+            Copyright © Beers City 2020 All rights reserved
+          </p>
+        </div>
       </div>
 
       <div className="small-menu">
