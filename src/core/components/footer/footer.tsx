@@ -26,7 +26,7 @@ export function Footer() {
       </div>
 
       <div className="qlq">
-        Follow us on
+        <p>Follow us on</p>
         <div className="list-logo">
           <a href="https://www.instagram.com/"></a>
           <img
