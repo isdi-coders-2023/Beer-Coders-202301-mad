@@ -5,16 +5,18 @@ export type MenuOption = {
   path: string;
 };
 
-const menuOptions: MenuOption[] = [
-  { label: 'Home', path: '/home' },
-  { label: 'My Beers', path: '/mybeers' },
-  { label: 'About us', path: '/about' },
-];
+// TEMPORAL:
+// const menuOptions: MenuOption[] = [
+//   { label: 'Home', path: '/home' },
+//   { label: 'My Beers', path: '/mybeers' },
+//   { label: 'About us', path: '/about' },
+// ];
 
 function App() {
   return (
     <div className="App">
-      {/* <Header>
+      {/* TEMP: Hasta que estén hechos los componentes.
+      <Header>
         <Menu menuOptions={menuOptions}></Menu>
       </Header>
       <AppRouter menuOptions={menuOptions}></AppRouter> */}
