@@ -4,11 +4,11 @@
   font-size: 12px;
   display: flex;
   flex-direction: row;
-
-  justify-content: space-around;
-  padding-bottom: 1em;
-
   justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  overflow: visible;
+  margin-top: 0;
 }
 
 .footer-logo-title {
