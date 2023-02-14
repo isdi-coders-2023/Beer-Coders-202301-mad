@@ -1,6 +1,9 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import './header.scss';
 
-export function Header() {
+type HeaderProps = { children: JSX.Element };
+
+export function Header({ children }: HeaderProps) {
   return (
     <header className="header">
       <a href="Home">
@@ -8,16 +11,10 @@ export function Header() {
           className="header__MainLogo"
           src="./img/logo2-transparent.png"
           alt=""
-        ></img>
+        />
       </a>
       <h1>Beer's City</h1>
-      <a href="">
-        <img
-          className="header__burger"
-          src="./img/burger-menu.png"
-          alt=""
-        ></img>
-      </a>
+      {children}
     </header>
   );
 }
