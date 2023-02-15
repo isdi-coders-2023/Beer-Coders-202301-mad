@@ -20,6 +20,7 @@ describe('Given AppRouter component', () => {
       path: '/details',
     },
   ];
+
   describe('When it is render and the path is "/home"', () => {
     test('Then, the title "Discover" of Home Page should be in the screen', async () => {
       render(
