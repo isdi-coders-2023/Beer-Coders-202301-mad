@@ -88,8 +88,14 @@ describe('Given AppRouter component', () => {
     test('Then, it should render the Error component', async () => {
       render(
         <Router
-          initialEntries={['/home', '/mybeers', '/about', '/anyText']}
-          initialIndex={3}
+          initialEntries={[
+            '/home',
+            '/mybeers',
+            '/about',
+            '/details',
+            '/anyText',
+          ]}
+          initialIndex={4}
         >
           <AppRouter menuOptions={mockOptions}></AppRouter>
         </Router>
