@@ -5,11 +5,8 @@
   display: grid;
   grid-template-rows: repeat(6, 1fr);
   grid-template-columns: repeat(4, 1fr);
-  height: 100%;
   font-family: 'Inter';
   color: rgba(94, 127, 66, 1);
-
-  padding-top: 5rem;
 
   .error-text {
     grid-row: 2/4;
@@ -51,7 +48,6 @@
 @media screen and (min-width: 700px) {
   .container-error {
     .error-logo {
-      align-items: flex-start;
       div {
         .elf {
           height: 100px;
