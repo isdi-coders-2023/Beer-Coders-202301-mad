@@ -1,9 +1,15 @@
-import './mybeers.scss';
 import { DetailedCard } from '../../../core/components/detailsCard/detailsCard';
-export default function MyBeersPage() {
+import { MainCard } from '../../home/components/main.card/main.card';
+import './mybeers.scss';
+
+export default function MyBeers() {
   return (
-    <>
-      <h2>My Beers</h2>;<MyBeers></MyBeers>;
-    </>
+    <section className="my-beers">
+      <h2>My Beers</h2>
+      <div className="list">
+        <MainCard></MainCard>
+        <DetailedCard></DetailedCard>
+      </div>
+    </section>
   );
 }
