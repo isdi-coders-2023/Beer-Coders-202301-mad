@@ -1,6 +1,4 @@
 import { createContext } from 'react';
+import { UseBeersStructure } from '../hooks/use.beers';
 
-export const BeersContext = createContext({} as any);
-
-// TEMPORAL
-// Type "any" a cambiar cuando esté el Custom Hook.
+export const BeersContext = createContext({} as UseBeersStructure);
