@@ -22,9 +22,8 @@ export function AppRouter({ menuOptions }: AppRouterProps) {
         <Route path={menuOptions[0].path} element={<Home></Home>}></Route>
         {/* <Route path={menuOptions[1].path} element={<MyBeers></MyBeers>}></Route> */}
         <Route path={menuOptions[2].path} element={<About></About>}></Route>
-        <Route path={'*'} element={<ErrorPage></ErrorPage>}></Route>
-        {/* <Route path={'*'} element={<ErrorPage></ErrorPage>}></Route> */}
         <Route path={'/details'} element={<Details></Details>}></Route>
+        <Route path={'*'} element={<ErrorPage></ErrorPage>}></Route>
       </Routes>
     </Suspense>
   );
