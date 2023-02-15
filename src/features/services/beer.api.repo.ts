@@ -20,16 +20,16 @@ export class BeerApiRepo {
 
     const url = this.url + defaultPage + pageNumber + beersPerPage;
 
-    const resp = await fetch(url);
-    const beerList = (await resp.json()) as BeerStructure[];
+    const response = await fetch(url);
+    const beerList = (await response.json()) as BeerStructure[];
     console.log(beerList);
     return beerList;
   }
 
   async getBeer(id: BeerStructure['id']): Promise<BeerStructure> {
     const url = this.url + '/' + id;
-    const resp = await fetch(url);
-    const beerInfo = (await resp.json()) as BeerStructure;
+    const response = await fetch(url);
+    const beerInfo = (await response.json()) as BeerStructure;
     console.log(beerInfo);
     return beerInfo;
   }
