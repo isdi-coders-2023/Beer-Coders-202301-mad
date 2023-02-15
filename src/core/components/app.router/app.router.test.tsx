@@ -15,6 +15,10 @@ describe('Given AppRouter component', () => {
       label: 'About',
       path: '/about',
     },
+    {
+      label: 'Details',
+      path: '/details',
+    },
   ];
   describe('When it is render and the path is "/home"', () => {
     test('Then, the title "Discover" of Home Page should be in the screen', async () => {
@@ -59,6 +63,22 @@ describe('Given AppRouter component', () => {
       );
       const element = await screen.findByRole('heading', {
         name: 'About us',
+      });
+      expect(element).toBeInTheDocument();
+    });
+  });
+  describe('When its trying to render the details page', () => {
+    test('Then, it should render the Details component', async () => {
+      render(
+        <Router
+          initialEntries={['/home', '/mybeers', '/about', '/details']}
+          initialIndex={3}
+        >
+          <AppRouter menuOptions={mockOptions}></AppRouter>
+        </Router>
+      );
+      const element = await screen.findByRole('heading', {
+        name: 'Details',
       });
       expect(element).toBeInTheDocument();
     });
