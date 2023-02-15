@@ -12,10 +12,14 @@ export default function Error(): JSX.Element {
       <div className="error-logo">
         <div>
           <img
+            className="elf"
             src="./img/elf-logo-transparent.png"
             alt="elf drink"
-            height="100px"
-            width="100px"
+          ></img>
+          <img
+            className="stone"
+            src="./img/stone-elf.png"
+            alt="stone-elf"
           ></img>
         </div>
       </div>
