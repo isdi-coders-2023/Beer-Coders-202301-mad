@@ -6,9 +6,11 @@ export function DetailedCard() {
   return (
     <>
       <div className="main-card">
-        <div className="info">
+        <div className="info-img">
           <img src="img/beer-empty-transparent.png" alt="Unnamed beer" />
           {/* TEMPORAL: De API "beer.image_url" */}
+        </div>
+        <div className="info-text">
           <p className="info__name"> Heineken </p>
           {/* TEMPORAL: De API "beer.name" */}
           <p className="info__type"> Extra Pale </p>
@@ -26,9 +28,6 @@ export function DetailedCard() {
           </p>
           {/* TEMPORAL: De API "beer.description" */}
         </div>
-        <button className="add-button">
-          <img src="img/add-icon.png" alt="Add button" />
-        </button>
       </div>
     </>
   );
