@@ -67,7 +67,7 @@ describe('Given AppRouter component', () => {
       expect(element).toBeInTheDocument();
     });
   });
-  describe('When its trying to render the details page', () => {
+  describe('When it is render the Details page', () => {
     test('Then, it should render the Details component', async () => {
       render(
         <Router
@@ -80,6 +80,21 @@ describe('Given AppRouter component', () => {
       const element = await screen.findByRole('heading', {
         name: 'Details',
       });
+      expect(element).toBeInTheDocument();
+    });
+  });
+
+  describe('When it is render the Error page', () => {
+    test('Then, it should render the Error component', async () => {
+      render(
+        <Router
+          initialEntries={['/home', '/mybeers', '/about', '/anyText']}
+          initialIndex={3}
+        >
+          <AppRouter menuOptions={mockOptions}></AppRouter>
+        </Router>
+      );
+      const element = await screen.findByText(/404/i);
       expect(element).toBeInTheDocument();
     });
   });
