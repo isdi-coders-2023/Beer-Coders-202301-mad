@@ -5,7 +5,6 @@
   display: grid;
   grid-template-rows: repeat(6, 1fr);
   grid-template-columns: repeat(4, 1fr);
-  gap: 3rem;
   height: 100%;
   font-family: 'Inter';
   color: rgba(94, 127, 66, 1);
@@ -26,19 +25,46 @@
   }
 
   .error-logo {
-    grid-row: 4/6;
+    grid-row: 5/7;
     grid-column: 2/4;
+    display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
 
     div {
       width: 100%;
       display: flex;
       justify-content: center;
+      align-items: flex-end;
+
+      .elf {
+        height: 100px;
+        width: 100px;
+      }
+      .stone {
+        height: 60px;
+        width: 60px;
+      }
     }
   }
 }
-
+@media screen and (min-width: 700px) {
+  .container-error {
+    .error-logo {
+      align-items: flex-start;
+      div {
+        .elf {
+          height: 100px;
+          width: 100px;
+        }
+        .stone {
+          height: 60px;
+          width: 60px;
+        }
+      }
+    }
+  }
+}
 .container-error .page {
   font-size: 1.2rem;
 }
