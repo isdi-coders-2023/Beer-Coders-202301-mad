@@ -1,5 +1,10 @@
 import { BeerStructure } from '../models/beer';
 
+export interface BeerApiRepoStructure {
+  loadBeers(): Promise<BeerStructure[]>;
+  getBeer(id: BeerStructure['id']): Promise<BeerStructure>;
+}
+
 export class BeerApiRepo {
   url: string;
 
@@ -12,6 +17,7 @@ export class BeerApiRepo {
     const beersPerPage = '&per_page=20';
 
     const pageNumber = '1';
+
     const url = this.url + defaultPage + pageNumber + beersPerPage;
 
     const resp = await fetch(url);
