@@ -8,7 +8,8 @@ const About = lazy(() => import('../../../beers/about/page/about'));
 const ErrorPage = lazy(() => import('../../../beers/error/page/error'));
 const Details = lazy(() => import('../../../beers/details/page/details'));
 // COMENTARIO TEMPORAL HASTA TERMINAR HOME, MY BEERS Y ABOUT.
-// const MyBeers = lazy(() => import('../../../features/mybeers/page/mybeers'));
+
+// const MyBeers = lazy(() => import('../../../beers/mybeers/page/mybeers'));
 
 type AppRouterProps = {
   menuOptions: MenuOption[];

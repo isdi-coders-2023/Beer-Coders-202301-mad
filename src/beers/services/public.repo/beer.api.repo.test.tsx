@@ -1,7 +1,7 @@
 import { BeerApiRepo } from './beer.api.repo';
 
 describe('Given there BeerApiRepo class', () => {
-  describe('When we intance the class with new BeerApiRepo', () => {
+  describe('When we instance the class with new BeerApiRepo', () => {
     let repo: BeerApiRepo;
 
     beforeEach(() => {
