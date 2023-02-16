@@ -1,4 +1,4 @@
-import { BeerStructure } from '../models/beer';
+import { BeerStructure } from '../../models/beer';
 
 export interface BeerApiRepoStructure {
   loadBeers(): Promise<BeerStructure[]>;
