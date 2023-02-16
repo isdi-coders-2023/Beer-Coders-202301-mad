@@ -5,12 +5,13 @@ export function Footer() {
     <footer className="container__footer">
       <div className="footer-logo-title">
         <div className="footer-title">
-          <img
-            src="./img/logo2-transparent.png"
-            alt="logo"
-            height="80px"
-            width="90px"
-          />
+          <a href="Home">
+            <img
+              className="header__MainLogo"
+              src="./img/logo2-transparent.png"
+              alt=""
+            />
+          </a>
         </div>
         <div className="footer-title2">
           Beers City
