@@ -71,14 +71,13 @@ describe('Given AppRouter component', () => {
     });
   });
 
-  // TEMPORAL HASTA QUE ESTÉ PAGE MYBEERS:
-  // describe('When it is render and the path is "/mybeers"', () => {
-  //   test('Then, the title "My Beers" of My Beers Page should be in the screen', async () => {
-  //     prepareTestFunction();
-  //      const element = await screen.findByRole('heading', {
-  //       name: 'My Beers',
-  //     });
-  //     expect(element).toBeInTheDocument();
-  //   });
-  // });
+  describe('When it is render and the path is "/mybeers"', () => {
+    test('Then, the title "My Beers" of My Beers Page should be in the screen', async () => {
+      prepareTestFunction();
+      const element = await screen.findByRole('heading', {
+        name: 'My Beers',
+      });
+      expect(element).toBeInTheDocument();
+    });
+  });
 });

@@ -12,7 +12,7 @@ export class BeerApiRepo {
     this.url = 'https://api.punkapi.com/v2/beers';
   }
 
-  async loadBeers(): Promise<BeerStructure[]> {
+  async loadPublicBeers(): Promise<BeerStructure[]> {
     const defaultPage = '?page=';
     const beersPerPage = '&per_page=20';
 
@@ -26,7 +26,7 @@ export class BeerApiRepo {
     return beerList;
   }
 
-  async getBeer(id: BeerStructure['id']): Promise<BeerStructure> {
+  async getPublicBeer(id: BeerStructure['id']): Promise<BeerStructure> {
     const url = this.url + '/' + id;
     const response = await fetch(url);
     const beerInfo = (await response.json()) as BeerStructure;
