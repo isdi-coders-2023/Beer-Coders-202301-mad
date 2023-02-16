@@ -1,12 +1,13 @@
+/* eslint-disable testing-library/no-unnecessary-act */
 /* eslint-disable testing-library/no-render-in-setup */
-import { render, screen } from '@testing-library/react';
+import { act, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { BeerApiRepo } from '../services/public.repo/beer.api.repo';
 import { useBeers } from './use.beers';
 
 describe('Given the useBeers Custom Hook and TestComponent', () => {
   let mockRepo: BeerApiRepo;
-  beforeEach(() => {
+  beforeEach(async () => {
     mockRepo = {
       loadPublicBeers: jest.fn(),
     } as unknown as BeerApiRepo;
@@ -20,7 +21,7 @@ describe('Given the useBeers Custom Hook and TestComponent', () => {
       );
     };
 
-    render(<TestComponent></TestComponent>);
+    await act(async () => render(<TestComponent></TestComponent>));
   });
 
   describe('When the TestComponent is rendered', () => {
@@ -41,7 +42,7 @@ describe('Given the useBeers Custom Hook and TestComponent', () => {
 
 describe('Given the useBeers Custom Hook and TestError component', () => {
   let spyLog: jest.SpyInstance;
-  beforeEach(() => {
+  beforeEach(async () => {
     spyLog = jest.spyOn(global.console, 'log');
 
     const mockRepoError = {
@@ -57,7 +58,7 @@ describe('Given the useBeers Custom Hook and TestError component', () => {
       );
     };
 
-    render(<TestError></TestError>);
+    await act(async () => render(<TestError></TestError>));
   });
 
   describe('When the TestError is rendered and the button is clicked', () => {
