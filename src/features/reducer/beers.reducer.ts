@@ -10,16 +10,18 @@ export function beersReducer(
     case beersActions.load:
       return action.payload as BeerStructure[];
 
-    case beersActions.add:
-      return [...state, action.payload as BeerStructure];
+    // TEMPORAL: Hasta tener disponible la API Privada:
 
-    case beersActions.update:
-      const payload = action.payload as BeerStructure;
-      return state.map((item) => (item.id === payload.id ? payload : item));
+    // case beersActions.add:
+    //   return [...state, action.payload as BeerStructure];
 
-    case beersActions.delete:
-      const id = action.payload as BeerStructure['id'];
-      return state.filter((item) => item.id !== id);
+    // case beersActions.update:
+    //   const payload = action.payload as BeerStructure;
+    //   return state.map((item) => (item.id === payload.id ? payload : item));
+
+    // case beersActions.delete:
+    //   const id = action.payload as BeerStructure['id'];
+    //   return state.filter((item) => item.id !== id);
 
     default:
       return state;
