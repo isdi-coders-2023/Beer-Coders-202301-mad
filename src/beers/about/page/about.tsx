@@ -1,6 +1,6 @@
 import './about.scss';
 
-export default function AboutPage() {
+export default function AboutPage(): JSX.Element {
   return (
     <section className="container__about">
       <h2 className="main__title">About us</h2>
