@@ -1,4 +1,4 @@
-import { MainCard } from '../components/main.card/main.card';
+import { HomeBeerList } from '../components/home.beer.list/home.beer.list';
 import './home.scss';
 
 export default function HomePage() {
@@ -6,9 +6,8 @@ export default function HomePage() {
     <section className="home-page">
       <h2>Discover</h2>
       {/* TEMPORAL <HomeList></HomeList> */}
-      <div className="list">
-        <MainCard></MainCard>
-        <MainCard></MainCard>
+      <div className="home-page-list">
+        <HomeBeerList></HomeBeerList>
       </div>
     </section>
   );
