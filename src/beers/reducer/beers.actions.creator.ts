@@ -19,23 +19,23 @@ export const loadBeersCreator = (payload: BeerStructure[]): BeersAction => {
 
 // TEMPORAL: Hasta tener disponible la API Privada:
 
-// export const addBeersCreator = (payload: BeerStructure) => {
-//   return {
-//     type: beersActions.add,
-//     payload,
-//   };
-// };
+// TEMP: export const addBeersCreator = (payload: BeerStructure) => {
+// TEMP:   return {
+// TEMP:    type: beersActions.add,
+// TEMP:    payload,
+// TEMP:   };
+// TEMP: };
 
-// export const updateBeersCreator = (payload: BeerStructure) => {
-//   return {
-//     type: beersActions.update,
-//     payload,
-//   };
-// };
+// TEMP: export const updateBeersCreator = (payload: BeerStructure) => {
+// TEMP:   return {
+// TEMP:     type: beersActions.update,
+// TEMP:     payload,
+// TEMP:   };
+// TEMP: };
 
-// export const deleteBeersCreator = (payload: BeerStructure['id']) => {
-//   return {
-//     type: beersActions.delete,
-//     payload,
-//   };
-// };
+// TEMP: export const deleteBeersCreator = (payload: BeerStructure['id']) => {
+// TEMP:   return {
+// TEMP:     type: beersActions.delete,
+// TEMP:     payload,
+// TEMP:   };
+// TEMP: };

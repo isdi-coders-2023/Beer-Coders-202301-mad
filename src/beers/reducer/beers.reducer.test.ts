@@ -3,8 +3,6 @@ import { beersActions } from './beers.actions';
 import { beersReducer } from './beers.reducer';
 
 describe('Given the beersReducer function', () => {
-  // const initialState: BeerStructure[] = [];
-
   const mockState = [
     {
       id: 1,
@@ -38,20 +36,14 @@ describe('Given the beersReducer function', () => {
 
   describe('When the action.type is the "beersActions.load" case', () => {
     test('Then, the state should be returned', async () => {
-      const element = beersReducer(
-        mockState,
-        mockBeerAction
-      ) as BeerStructure[];
+      const element = beersReducer(mockState, mockBeerAction);
       expect(element).toEqual(mockState);
     });
   });
 
   describe('When the action.type is the "default" case', () => {
     test('Then, the state should be returned', async () => {
-      const element = beersReducer(
-        mockState,
-        mockBeerDefaultAction
-      ) as BeerStructure[];
+      const element = beersReducer(mockState, mockBeerDefaultAction);
       expect(element).toEqual(mockState);
     });
   });
