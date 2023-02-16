@@ -34,7 +34,7 @@ describe('Given the useBeers Custom Hook and TestComponent', () => {
   describe('When the TestComponent is rendered and the button is clicked', () => {
     test('Then, the loadBeers function should be called', async () => {
       const element = await screen.findByRole('button');
-      userEvent.click(element);
+      await act(async () => userEvent.click(element));
       expect(mockRepo.loadPublicBeers).toHaveBeenCalled();
     });
   });
@@ -46,7 +46,7 @@ describe('Given the useBeers Custom Hook and TestError component', () => {
     spyLog = jest.spyOn(global.console, 'log');
 
     const mockRepoError = {
-      loadBeers: jest.fn().mockRejectedValue(new Error('Test Error')),
+      loadPublicBeers: jest.fn().mockRejectedValue(new Error('Test Error')),
     } as unknown as BeerApiRepo;
 
     const TestError = function () {
@@ -64,7 +64,7 @@ describe('Given the useBeers Custom Hook and TestError component', () => {
   describe('When the TestError is rendered and the button is clicked', () => {
     test('Then, the loadBeers function should be catch the error', async () => {
       const element = await screen.findByRole('button');
-      userEvent.click(element);
+      await act(async () => userEvent.click(element));
       expect(spyLog).toHaveBeenCalled();
     });
   });
