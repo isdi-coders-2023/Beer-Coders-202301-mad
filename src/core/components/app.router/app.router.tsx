@@ -2,11 +2,11 @@ import { lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { MenuOption } from '../app/App';
 
-const Home = lazy(() => import('../../../features/home/page/home'));
-const MyBeers = lazy(() => import('../../../features/mybeers/page/mybeers'));
-const About = lazy(() => import('../../../features/about/page/about'));
-const ErrorPage = lazy(() => import('../../../features/error/page/error'));
-const Details = lazy(() => import('../../../features/details/page/details'));
+const Home = lazy(() => import('../../../beers/home/page/home'));
+const MyBeers = lazy(() => import('../../../beers/mybeers/page/mybeers'));
+const About = lazy(() => import('../../../beers/about/page/about'));
+const ErrorPage = lazy(() => import('../../../beers/error/page/error'));
+const Details = lazy(() => import('../../../beers/details/page/details'));
 
 type AppRouterProps = {
   menuOptions: MenuOption[];
