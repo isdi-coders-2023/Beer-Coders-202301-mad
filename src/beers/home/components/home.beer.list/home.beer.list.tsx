@@ -12,15 +12,15 @@ export function HomeBeerList() {
 
   return (
     <>
-      <div className="home-page-list-filter"></div>
-      <ul>
-        {beerList.map((item: BeerStructure) => (
-          <MainCard key={item.id} beer={item}></MainCard>
-        ))}
-      </ul>
-      <div className="home-page-list-cards"></div>
-
-      <div className="home-page-list-next-prev-button"></div>
+      <div className="home-page-list-filter">FILTRO</div>
+      <div className="home-page-list-cards">
+        <ul>
+          {beerList.map((item: BeerStructure) => (
+            <MainCard key={item.id} beer={item}></MainCard>
+          ))}
+        </ul>
+      </div>
+      <div className="home-page-list-next-prev-button">PREV-NEXT-BUTTON</div>
     </>
   );
 }
