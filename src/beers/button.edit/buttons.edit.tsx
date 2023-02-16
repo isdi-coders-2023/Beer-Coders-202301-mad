@@ -1,5 +1,4 @@
 export function Edit(): JSX.Element {
-  // const {  } = useContext(BeersContext);
   return (
     <>
       <div className="edit-button">
