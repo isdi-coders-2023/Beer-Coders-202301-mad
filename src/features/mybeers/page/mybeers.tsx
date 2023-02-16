@@ -1,19 +1,25 @@
 import { DetailedCard } from '../../../core/components/detailsCard/detailsCard';
+import { Edit } from '../../button.edit/buttons.edit';
+import CreateButton from '../../create.button/create.button';
+import Remove from '../../remove.button/remove.button';
 import './mybeers.scss';
 
 export default function MyBeers() {
   return (
     <section className="my-beers">
-      <div className="grid">
-        <h2 className="">My Beers</h2>
-        <div className="create">+</div>
-
-        <div className="Details">
-          <div className="card-detail">
-            <DetailedCard></DetailedCard>
-            <DetailedCard></DetailedCard>
-          </div>
-          <div className="button"></div>
+      <h2 className="title">My Beers</h2>
+      <div className="create">
+        <CreateButton></CreateButton>
+      </div>
+      <div className="remove">
+        <Remove></Remove>
+      </div>
+      <div className="edit">
+        <Edit></Edit>
+      </div>
+      <div className="Details">
+        <div className="card-detail">
+          <DetailedCard></DetailedCard>
         </div>
       </div>
     </section>
