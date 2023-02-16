@@ -18,7 +18,7 @@ export function useBeers(repo: BeerApiRepo) {
 
   const loadBeers = useCallback(async () => {
     try {
-      const beerList = await repo.loadBeers();
+      const beerList = await repo.loadPublicBeers();
 
       act(() => {
         dispatch(ac.loadBeersCreator(beerList));
@@ -58,6 +58,5 @@ export function useBeers(repo: BeerApiRepo) {
   return {
     beerList,
     loadBeers,
-    handlerError,
   };
 }
