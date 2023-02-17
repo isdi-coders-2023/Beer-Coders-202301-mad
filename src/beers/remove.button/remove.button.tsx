@@ -1,16 +1,12 @@
 import { DetailedCard } from '../../core/components/detailsCard/detailsCard';
 
-export default function Remove(): JSX.Element {
-  function deleteBeers(name: any) {
-    throw new Error('Function not implemented.');
-  }
-
+export default function Delete(): JSX.Element {
   return (
     <>
       <div className="remove-button">
         <button
           onClick={() => {
-            deleteBeers(DetailedCard.name);
+            Delete();
           }}
         >
           {' '}
