@@ -49,7 +49,7 @@ describe('Given the BeerPrivateRepo class', () => {
       global.fetch = jest.fn().mockResolvedValue({
         json: jest.fn().mockResolvedValue(mock),
       });
-      const result = await repo.editPrivateBeer(mock);
+      const result = await repo.editBeer(mock);
       expect(result).toEqual(mock);
     });
     test('Then if we call the deletePrivateBeer() method, it should return a Void value that shows us that we deleted the Beer', async () => {
@@ -57,7 +57,7 @@ describe('Given the BeerPrivateRepo class', () => {
         ok: true,
         json: jest.fn(),
       });
-      await repo.deletePrivateBeer(1);
+      await repo.deleteBeer(1);
       expect(global.fetch).toHaveBeenCalled();
     });
     test('Then if we call the deletePrivateBeer() method with a false value in the response, should show an error message', async () => {
@@ -66,7 +66,7 @@ describe('Given the BeerPrivateRepo class', () => {
         json: jest.fn(),
       });
       try {
-        await repo.deletePrivateBeer(1);
+        await repo.deleteBeer(1);
       } catch (error) {
         expect((error as Error).message).toBe('Delete was not possible!');
       }

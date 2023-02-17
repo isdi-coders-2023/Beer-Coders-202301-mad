@@ -3,7 +3,7 @@
 import { act, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { BeersContext } from '../../../context/beers.context';
-import { UseBeersStructure } from '../../../hooks/use.beers';
+import { UseBeersStructure } from '../../../hooks/hook.public/use.beers';
 import { MainCard } from '../main.card/main.card';
 import { HomeBeerList } from './home.beer.list';
 

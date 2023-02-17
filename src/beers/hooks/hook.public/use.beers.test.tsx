@@ -2,7 +2,7 @@
 /* eslint-disable testing-library/no-render-in-setup */
 import { act, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { BeerApiRepo } from '../services/public.repo/beer.api.repo';
+import { BeerApiRepo } from '../../services/public.repo/beer.api.repo';
 import { useBeers } from './use.beers';
 
 describe('Given the useBeers Custom Hook and TestComponent', () => {

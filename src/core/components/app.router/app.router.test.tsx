@@ -4,7 +4,7 @@ import { render, screen, waitFor } from '@testing-library/react';
 import { MenuOption } from '../app/App';
 import { AppRouter } from './app.router';
 import '@testing-library/jest-dom';
-import { UseBeersStructure } from '../../../beers/hooks/use.beers';
+import { UseBeersStructure } from '../../../beers/hooks/hook.public/use.beers';
 import { BeersContext } from '../../../beers/context/beers.context';
 
 describe('Given AppRouter component', () => {
