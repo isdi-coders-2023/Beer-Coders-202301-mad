@@ -31,7 +31,7 @@ export class BeerPrivateRepo {
     return privateBeerInfo;
   }
 
-  async editPrivateBeer(beer: Partial<BeerStructure>): Promise<BeerStructure> {
+  async editBeer(beer: Partial<BeerStructure>): Promise<BeerStructure> {
     const url = this.url + '/' + beer.id;
     const resp = await fetch(url, {
       method: 'PATCH',
@@ -44,7 +44,7 @@ export class BeerPrivateRepo {
     return privateBeerInfo;
   }
 
-  async deletePrivateBeer(id: BeerStructure['id']): Promise<void> {
+  async deleteBeer(id: BeerStructure['id']): Promise<void> {
     const url = this.url + '/' + id;
     const resp = await fetch(url, {
       method: 'DELETE',
