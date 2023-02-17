@@ -1,12 +1,12 @@
 import { DetailedCard } from '../../core/components/detailsCard/detailsCard';
 
-export default function Delete(): JSX.Element {
+export default function deletePrivateBeer(): JSX.Element {
   return (
     <>
       <div className="remove-button">
         <button
           onClick={() => {
-            Delete();
+            deletePrivateBeer();
           }}
         >
           {' '}

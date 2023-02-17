@@ -3,7 +3,7 @@ import { BeerStructure, ProtoBeerStructure } from '../../models/beer';
 export class BeerPrivateRepo {
   url: string;
   constructor() {
-    this.url = 'http://localhost:5080/beers';
+    this.url = 'http://localhost:5050/beers';
   }
 
   async loadPrivateBeer(): Promise<BeerStructure[]> {
