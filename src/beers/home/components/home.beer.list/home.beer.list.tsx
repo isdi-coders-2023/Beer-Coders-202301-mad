@@ -21,7 +21,10 @@ export function HomeBeerList() {
           ))}
         </ul>
       </div>
-      <div className="home-page-list-next-prev-button">PREV-NEXT-BUTTON</div>
+      <div className="home-page-list-next-prev-button">
+        <img src="img/previous-button.png" alt="Previous button" />
+        <img src="img/next-button.png" alt="Next button" />
+      </div>
     </>
   );
 }
