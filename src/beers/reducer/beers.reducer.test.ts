@@ -30,20 +30,20 @@ describe('Given the beersReducer function', () => {
   };
 
   // TEMPORAL: Hasta resolver test.
-  // const mockAddAction = {
-  //   type: beersActions.add,
-  //   payload: mockState,
-  // };
+  // TEMPORAL: const mockAddAction = {
+  // TEMPORAL:  type: beersActions.add,
+  // TEMPORAL:  payload: mockState,
+  // TEMPORAL:};
 
-  // const mockUpdateAction = {
-  //   type: beersActions.update,
-  //   payload: mockState,
-  // };
+  // TEMPORAL:const mockUpdateAction = {
+  // TEMPORAL:  type: beersActions.update,
+  // TEMPORAL:  payload: mockState,
+  // TEMPORAL:};
 
-  // const mockDeleteAction = {
-  //   type: beersActions.delete,
-  //   payload: mockState,
-  // };
+  // TEMPORAL:const mockDeleteAction = {
+  // TEMPORAL:  type: beersActions.delete,
+  // TEMPORAL:  payload: mockState,
+  // TEMPORAL:};
 
   const mockBeerDefaultAction = {
     type: 'default',
@@ -58,26 +58,26 @@ describe('Given the beersReducer function', () => {
   });
 
   // TEMPORAL: Hasta resolver test.
-  // describe('When the action.type is the "beersActions.add" case', () => {
-  //   test('Then, the state should be returned', async () => {
-  //     const element = beersReducer(mockState, mockAddAction);
-  //     expect(element).toEqual(mockState);
-  //   });
-  // });
+  // TEMPORAL:describe('When the action.type is the "beersActions.add" case', () => {
+  // TEMPORAL:  test('Then, the state should be returned', async () => {
+  // TEMPORAL:    const element = beersReducer(mockState, mockAddAction);
+  // TEMPORAL:    expect(element).toEqual(mockState);
+  // TEMPORAL:  });
+  // TEMPORAL:});
 
-  // describe('When the action.type is the "beersActions.update" case', () => {
-  //   test('Then, the state should be returned', async () => {
-  //     const element = beersReducer(mockState, mockUpdateAction);
-  //     expect(element).toEqual(mockState);
-  //   });
-  // });
+  // TEMPORAL:describe('When the action.type is the "beersActions.update" case', () => {
+  // TEMPORAL:  test('Then, the state should be returned', async () => {
+  // TEMPORAL:    const element = beersReducer(mockState, mockUpdateAction);
+  // TEMPORAL:    expect(element).toEqual(mockState);
+  // TEMPORAL:  });
+  // TEMPORAL:});
 
-  // describe('When the action.type is the "beersActions.delete" case', () => {
-  //   test('Then, the state should be returned', async () => {
-  //     const element = beersReducer(mockState, mockDeleteAction);
-  //     expect(element).toEqual(mockState);
-  //   });
-  // });
+  // TEMPORAL:describe('When the action.type is the "beersActions.delete" case', () => {
+  // TEMPORAL:  test('Then, the state should be returned', async () => {
+  // TEMPORAL:    const element = beersReducer(mockState, mockDeleteAction);
+  // TEMPORAL:    expect(element).toEqual(mockState);
+  // TEMPORAL:  });
+  // TEMPORAL:});
 
   describe('When the action.type is the "default" case', () => {
     test('Then, the state should be returned', async () => {
