@@ -20,6 +20,7 @@ export default function MyBeers() {
       <div className="Details">
         <div className="card-detail">
           <DetailedCard></DetailedCard>
+          <DetailedCard></DetailedCard>
         </div>
       </div>
     </section>
