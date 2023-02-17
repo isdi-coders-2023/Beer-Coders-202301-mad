@@ -9,7 +9,7 @@ type MenuProps = {
 export function Menu({ menuOptions }: MenuProps) {
   return (
     <>
-      <div className="container">
+      <div className="menu-container">
         <a href="#" className="burgerA">
           <img
             className="burgerImg"
