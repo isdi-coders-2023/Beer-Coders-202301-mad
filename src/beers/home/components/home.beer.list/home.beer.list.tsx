@@ -11,6 +11,10 @@ export function HomeBeerList() {
     loadBeers();
   }, [loadBeers]);
 
+  const handlerPrevButton = (pageChange: number) => {
+    loadBeers(pageChange);
+  };
+
   return (
     <>
       <div className="home-page-list-filter">FILTRO</div>
@@ -21,7 +25,24 @@ export function HomeBeerList() {
           ))}
         </ul>
       </div>
-      <div className="home-page-list-next-prev-button">PREV-NEXT-BUTTON</div>
+      <div className="home-page-list-next-prev-button">
+        <button
+          className="prev-button"
+          onClick={() => {
+            handlerPrevButton(-1);
+          }}
+        >
+          <img src="img/previous-button.png" alt="Previous button" />
+        </button>
+        <button
+          className="next-button"
+          onClick={() => {
+            handlerPrevButton(+1);
+          }}
+        >
+          <img src="img/next-button.png" alt="Next button" />
+        </button>
+      </div>
     </>
   );
 }

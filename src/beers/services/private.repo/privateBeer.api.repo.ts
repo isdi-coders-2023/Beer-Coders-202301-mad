@@ -8,15 +8,15 @@ export class BeerPrivateRepo {
 
   async loadPrivateBeer(): Promise<BeerStructure[]> {
     const resp = await fetch(this.url);
-    const data = (await resp.json()) as BeerStructure[];
-    return data;
+    const privateBeerList = (await resp.json()) as BeerStructure[];
+    return privateBeerList;
   }
 
   async getPrivateBeer(id: BeerStructure['id']): Promise<BeerStructure> {
     const url = this.url + '/' + id;
     const resp = await fetch(url);
-    const data = (await resp.json()) as BeerStructure;
-    return data;
+    const privateBeerInfo = (await resp.json()) as BeerStructure;
+    return privateBeerInfo;
   }
 
   async createBeer(beer: ProtoBeerStructure): Promise<BeerStructure> {
@@ -27,8 +27,8 @@ export class BeerPrivateRepo {
         'Content-type': 'application/json',
       },
     });
-    const data = (await resp.json()) as BeerStructure;
-    return data;
+    const privateBeerInfo = (await resp.json()) as BeerStructure;
+    return privateBeerInfo;
   }
 
   async editPrivateBeer(beer: Partial<BeerStructure>): Promise<BeerStructure> {
@@ -40,8 +40,8 @@ export class BeerPrivateRepo {
         'Content-type': 'application/json',
       },
     });
-    const data = (await resp.json()) as BeerStructure;
-    return data;
+    const privateBeerInfo = (await resp.json()) as BeerStructure;
+    return privateBeerInfo;
   }
 
   async deletePrivateBeer(id: BeerStructure['id']): Promise<void> {
