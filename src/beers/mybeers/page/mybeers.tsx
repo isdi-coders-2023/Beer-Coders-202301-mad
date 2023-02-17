@@ -1,7 +1,7 @@
 import { DetailedCard } from '../../../core/components/detailsCard/detailsCard';
 import { Edit } from '../../button.edit/buttons.edit';
 import CreateButton from '../../create.button/create.button';
-import Remove from '../../remove.button/remove.button';
+import DeleteButton from '../../delete.button/delete.button';
 import './mybeers.scss';
 
 export default function MyBeers() {
@@ -11,8 +11,8 @@ export default function MyBeers() {
       <div className="create">
         <CreateButton></CreateButton>
       </div>
-      <div className="remove">
-        <Remove></Remove>
+      <div className="delete">
+        <DeleteButton></DeleteButton>
       </div>
       <div className="edit">
         <Edit></Edit>
