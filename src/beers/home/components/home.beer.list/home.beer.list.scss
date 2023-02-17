@@ -1,0 +1,29 @@
+.home-page-list-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    row-gap: 2rem;
+    column-gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .home-page-list-cards {
+    & ul {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .home-page-list-cards {
+    & ul {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+}
