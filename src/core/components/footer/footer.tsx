@@ -30,11 +30,13 @@ export function Footer() {
 
       <div className="qlq">
         <p>Follow us on</p>
+
         <div className="list-logo">
           <a href="https://www.instagram.com/"></a>
           <img
+            className="instagram"
             src="./img/instagram-green.png"
-            alt="instagram"
+            alt=""
             width="30px"
             height="30px"
           />

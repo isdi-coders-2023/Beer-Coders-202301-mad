@@ -7,6 +7,8 @@ const MyBeers = lazy(() => import('../../../beers/mybeers/page/mybeers'));
 const About = lazy(() => import('../../../beers/about/page/about'));
 const ErrorPage = lazy(() => import('../../../beers/error/page/error'));
 const Details = lazy(() => import('../../../beers/details/page/details'));
+const EditPage = lazy(() => import('../../../beers/edit/page/edit'));
+const CreatePage = lazy(() => import('../../../beers/create/page/create'));
 
 type AppRouterProps = {
   menuOptions: MenuOption[];
@@ -21,6 +23,8 @@ export function AppRouter({ menuOptions }: AppRouterProps) {
         <Route path={menuOptions[1].path} element={<MyBeers></MyBeers>}></Route>
         <Route path={menuOptions[2].path} element={<About></About>}></Route>
         <Route path={'/details'} element={<Details></Details>}></Route>
+        <Route path={'/edit'} element={<EditPage></EditPage>}></Route>
+        <Route path={'/create'} element={<CreatePage></CreatePage>}></Route>
         <Route path={'*'} element={<ErrorPage></ErrorPage>}></Route>
       </Routes>
     </Suspense>
