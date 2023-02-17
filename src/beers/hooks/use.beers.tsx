@@ -15,15 +15,18 @@ export function useBeers(repo: BeerApiRepo) {
     console.log(error.message);
   };
 
-  const loadBeers = useCallback(async () => {
-    try {
-      const beerList = await repo.loadPublicBeers();
+  const loadBeers = useCallback(
+    async (pageChange: number = 0) => {
+      try {
+        const beerList = await repo.loadPublicBeers(pageChange);
 
-      dispatch(ac.loadBeersCreator(beerList));
-    } catch (error) {
-      handlerError(error as Error);
-    }
-  }, [repo]);
+        dispatch(ac.loadBeersCreator(beerList));
+      } catch (error) {
+        handlerError(error as Error);
+      }
+    },
+    [repo]
+  );
 
   return {
     beerList,

@@ -7,16 +7,22 @@ export interface BeerApiRepoStructure {
 
 export class BeerApiRepo {
   url: string;
+  actualPage: number;
 
   constructor() {
     this.url = 'https://api.punkapi.com/v2/beers';
+    this.actualPage = 1;
   }
 
-  async loadPublicBeers(): Promise<BeerStructure[]> {
+  async loadPublicBeers(pageChange: number): Promise<BeerStructure[]> {
     const defaultPage = '?page=';
     const beersPerPage = '&per_page=20';
 
-    const pageNumber = '1';
+    this.actualPage = this.actualPage + pageChange;
+
+    if (this.actualPage === 0) this.actualPage = 1;
+
+    const pageNumber = this.actualPage.toString();
 
     const url = this.url + defaultPage + pageNumber + beersPerPage;
 

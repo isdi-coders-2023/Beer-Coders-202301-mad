@@ -13,7 +13,16 @@ describe('Given there BeerApiRepo class', () => {
         json: jest.fn().mockResolvedValue([]),
       });
 
-      const result = await repo.loadPublicBeers();
+      const result = await repo.loadPublicBeers(0);
+      expect(result).toEqual([]);
+    });
+
+    test('Then if we call the loadBeer() method, with pageChange (-1) the result should be equal to the mock value', async () => {
+      global.fetch = jest.fn().mockResolvedValue({
+        json: jest.fn().mockResolvedValue([]),
+      });
+
+      const result = await repo.loadPublicBeers(-1);
       expect(result).toEqual([]);
     });
 
