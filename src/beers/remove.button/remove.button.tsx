@@ -1,5 +1,3 @@
-import { DetailedCard } from '../../core/components/detailsCard/detailsCard';
-
 export default function deletePrivateBeer(): JSX.Element {
   return (
     <>
