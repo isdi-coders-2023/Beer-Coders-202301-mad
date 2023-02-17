@@ -13,7 +13,7 @@ describe('Given there BeerApiRepo class', () => {
         json: jest.fn().mockResolvedValue([]),
       });
 
-      const result = await repo.loadPublicBeers();
+      const result = await repo.loadPublicBeers(0);
       expect(result).toEqual([]);
     });
 
