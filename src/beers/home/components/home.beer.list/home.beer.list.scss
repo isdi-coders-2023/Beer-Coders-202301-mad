@@ -20,6 +20,11 @@
   gap: 4rem;
   padding: 3rem 0rem 1rem;
 
+  & button {
+    border: none;
+    background-color: inherit;
+  }
+
   & img {
     height: 50px;
     width: 50px;

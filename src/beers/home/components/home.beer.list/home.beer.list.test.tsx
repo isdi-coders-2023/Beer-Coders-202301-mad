@@ -30,7 +30,7 @@ describe('Given, HomeBeerList component', () => {
         )
       );
 
-      elements = screen.getAllByRole('img');
+      elements = screen.getAllByRole('button');
     });
 
     test('Then, the MainCard component should be call', async () => {

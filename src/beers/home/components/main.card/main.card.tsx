@@ -1,5 +1,3 @@
-import { useContext } from 'react';
-import { BeersContext } from '../../../context/beers.context';
 import { BeerStructure } from '../../../models/beer';
 import './main.card.scss';
 
