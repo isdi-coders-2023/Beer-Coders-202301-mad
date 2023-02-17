@@ -22,6 +22,14 @@ describe('Given AppRouter component', () => {
       label: 'Details',
       path: '/details',
     },
+    {
+      label: 'Edit',
+      path: '/edit',
+    },
+    {
+      label: 'Create',
+      path: '/create',
+    },
   ];
 
   const mockContext = {
@@ -39,6 +47,8 @@ describe('Given AppRouter component', () => {
             '/details',
             '/anyText',
             '/mybeers',
+            '/edit',
+            '/create',
           ]}
           initialIndex={number}
         >
@@ -90,6 +100,22 @@ describe('Given AppRouter component', () => {
       const element = await screen.findByRole('heading', {
         name: 'My Beers',
       });
+      expect(element).toBeInTheDocument();
+    });
+  });
+
+  describe('When it is render the Edit page', () => {
+    test('Then, it should render the Edit component', async () => {
+      await waitFor(async () => prepareTestFunction(5));
+      const element = await screen.findByText(/Edit/i);
+      expect(element).toBeInTheDocument();
+    });
+  });
+
+  describe('When it is render the Create page', () => {
+    test('Then, it should render the Create component', async () => {
+      await waitFor(async () => prepareTestFunction(6));
+      const element = await screen.findByText(/Add/i);
       expect(element).toBeInTheDocument();
     });
   });
