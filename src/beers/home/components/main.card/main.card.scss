@@ -39,6 +39,11 @@
     & img {
       width: 30px;
     }
+
+    img:active {
+      background-color: 2px 2px 5px rgb(205, 242, 173, 100%);
+      box-shadow: 2px 2px 5px rgb(71, 69, 69, 100%);
+    }
   }
 }
 
