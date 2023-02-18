@@ -17,12 +17,7 @@ export function DetailedCard({ beer }: DetailedCardProps) {
   };
 
   const handlerEditButton = (beer: BeerStructure) => {
-    return (
-      <>
-        <Edit editBeer={beer}></Edit>
-        <Link to={'../../../beers/edit/page/edit'}></Link>
-      </>
-    );
+    return <Edit editBeer={beer}></Edit>;
   };
 
   return (
