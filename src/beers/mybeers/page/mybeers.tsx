@@ -3,7 +3,6 @@ import { DetailedCard } from '../../detailsCard/detailsCard';
 import { Edit } from '../../button.edit/buttons.edit';
 import { PrivateBeersContext } from '../../context/private.beer.context';
 import CreateButton from '../../create.button/create.button';
-import DeleteButton from '../../delete.button/delete.button';
 import { BeerStructure } from '../../models/beer';
 import './mybeers.scss';
 
@@ -19,9 +18,6 @@ export default function MyBeers() {
       <h2 className="title">My Beers</h2>
       <div className="create">
         <CreateButton></CreateButton>
-      </div>
-      <div className="delete">
-        <DeleteButton></DeleteButton>
       </div>
       <div className="edit">
         <Edit></Edit>

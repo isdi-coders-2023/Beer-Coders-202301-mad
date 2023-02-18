@@ -8,8 +8,9 @@
 
   & .info-img {
     display: flex;
+    flex-direction: column;
     padding: 0.5rem;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     min-width: 100px;
     max-width: 120px;
@@ -17,7 +18,18 @@
 
     & img {
       max-width: 80px;
-      max-height: 250px;
+      max-height: 200px;
+    }
+
+    & .delete-button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      margin: 0.5rem;
+
+      & img {
+        width: 30px;
+      }
     }
   }
 
