@@ -26,14 +26,12 @@ export default function MyBeers() {
       <div className="edit">
         <Edit></Edit>
       </div>
-      <div className="Details">
-        <div className="card-detail">
-          <ul>
-            {privateBeerList.map((item: BeerStructure) => (
-              <DetailedCard key={item.id} beer={item}></DetailedCard>
-            ))}
-          </ul>
-        </div>
+      <div className="card-detail">
+        <ul>
+          {privateBeerList.map((item: BeerStructure) => (
+            <DetailedCard key={item.id} beer={item}></DetailedCard>
+          ))}
+        </ul>
       </div>
     </section>
   );
