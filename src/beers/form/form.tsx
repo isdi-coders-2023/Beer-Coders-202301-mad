@@ -1,12 +1,13 @@
 import './form.scss';
-import { SyntheticEvent, useContext } from 'react';
+import { SyntheticEvent, useContext, useState } from 'react';
 import { PrivateBeersContext } from '../context/private.beer.context';
 import { ToCreateBeer } from '../models/beer';
 
 export default function AddForm() {
   const { createBeer } = useContext(PrivateBeersContext);
+  const [showMessage, setShowMessage] = useState(false);
 
-  const handleSumbit = (event: SyntheticEvent) => {
+  const handleSubmit = (event: SyntheticEvent) => {
     event.preventDefault();
     const form = event.target as HTMLFormElement;
     const inputs = form.querySelectorAll('input');
@@ -25,13 +26,18 @@ export default function AddForm() {
       type,
       description
     );
+
+    createBeer(newBeer);
+    setShowMessage(true);
+    setTimeout(() => setShowMessage(false), 3000);
   };
 
   return (
     <>
       <div className="container">
         <div className="form-container">
-          <form className="add" onSubmit={handleSumbit}>
+          {showMessage && <div className="success-message">Beer added!</div>}
+          <form className="add" onSubmit={handleSubmit}>
             <input
               type="text"
               name="imageUrl"

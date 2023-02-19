@@ -5,7 +5,7 @@ describe('Given Edit component', () => {
   describe('When it is render', () => {
     test('Then it should have the Add in the screen', () => {
       render(<Create></Create>);
-      const element = screen.getByText(/My Beers/i);
+      const element = screen.getByText('My Beers - Add your own beer');
       expect(element).toBeInTheDocument();
     });
   });

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { DetailedCard } from '../../../core/components/detailsCard/detailsCard';
 import { Edit } from '../../button.edit/buttons.edit';
 import CreateButton from '../../create.button/create.button';
@@ -9,7 +10,9 @@ export default function MyBeers() {
     <section className="my-beers">
       <h2 className="title">My Beers</h2>
       <div className="create">
-        <CreateButton></CreateButton>
+        <Link to="/create">
+          <button>+ Create your beer</button>
+        </Link>{' '}
       </div>
       <div className="delete">
         <DeleteButton></DeleteButton>
