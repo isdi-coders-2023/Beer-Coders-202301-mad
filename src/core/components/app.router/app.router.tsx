@@ -22,7 +22,10 @@ export function AppRouter({ menuOptions }: AppRouterProps) {
         <Route path={menuOptions[0].path} element={<Home></Home>}></Route>
         <Route path={menuOptions[1].path} element={<MyBeers></MyBeers>}></Route>
         <Route path={menuOptions[2].path} element={<About></About>}></Route>
-        <Route path={'/details'} element={<Details></Details>}></Route>
+        <Route
+          path={'/details'}
+          element={<Details detailBeer></Details>}
+        ></Route>
         <Route path={'/edit'} element={<EditPage editBeer></EditPage>}></Route>
         <Route path={'/create'} element={<CreatePage></CreatePage>}></Route>
         <Route path={'*'} element={<ErrorPage></ErrorPage>}></Route>
