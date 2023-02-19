@@ -38,12 +38,7 @@ export default function AddForm() {
         <div className="form-container">
           {showMessage && <div className="success-message">Beer added!</div>}
           <form className="add" onSubmit={handleSubmit}>
-            <input
-              type="text"
-              name="imageUrl"
-              placeholder="Image URL"
-              required
-            />
+            <input type="text" name="image" placeholder="image" required />
             <input type="text" name="beerName" placeholder="Name" required />
             <input type="number" name="ibu" placeholder="IBU" required />
             <input
@@ -60,7 +55,7 @@ export default function AddForm() {
               placeholder="Description"
               required
             />
-            <button type="submit">Add</button>
+            <button type="submit">Create!</button>
           </form>
         </div>
       </div>

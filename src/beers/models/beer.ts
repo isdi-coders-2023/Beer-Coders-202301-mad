@@ -3,7 +3,7 @@ type HasId = {
 };
 
 export type ProtoBeerStructure = {
-  image_url: string;
+  image: string;
   name: string;
   ibu: number;
   abv: number;
@@ -17,7 +17,7 @@ export class ProtoBeer implements ProtoBeerStructure {
   public isFavorite: boolean;
 
   constructor(
-    public image_url: string,
+    public image: string,
     public name: string,
     public ibu: number,
     public abv: number,
@@ -30,7 +30,7 @@ export class ProtoBeer implements ProtoBeerStructure {
 
 export class ToCreateBeer implements ProtoBeerStructure {
   constructor(
-    public image_url: string,
+    public image: string,
     public name: string,
     public ibu: number,
     public abv: number,
