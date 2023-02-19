@@ -1,13 +1,22 @@
 .header {
   display: flex;
   flex-direction: row;
-  gap: 1rem;
   align-items: center;
   justify-content: space-between;
+  padding: 0.5rem;
+
+  &-logo-title {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    justify-content: flex-start;
+  }
 
   h1 {
-    font-size: 2rem;
+    font-size: 1.4rem;
     font-weight: bold;
+    color: rgb(94, 127, 66);
   }
 
   &__MainLogo {
@@ -16,12 +25,29 @@
   }
 }
 
-@media (min-width: 700px) {
-  h1 {
-    padding: 2rem;
-  }
+@media screen and (min-width: 400px) {
   .header {
-    background-color: #cdf2ad;
-    justify-content: flex-start;
+    h1 {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .header {
+    background-color: rgb(205, 242, 173);
+    width: 100%;
+
+    &-logo-title {
+      gap: 1.5rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    &-menu-logo {
+      color: rgb(94, 127, 66);
+    }
   }
 }
