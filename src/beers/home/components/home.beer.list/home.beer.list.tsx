@@ -1,6 +1,7 @@
 import { useContext, useEffect } from 'react';
 import { BeersContext } from '../../../context/beers.context';
 import { BeerStructure } from '../../../models/beer';
+import FilterButtons from '../filter/filter';
 import { MainCard } from '../main.card/main.card';
 import './home.beer.list.scss';
 
@@ -17,7 +18,9 @@ export function HomeBeerList() {
 
   return (
     <>
-      <div className="home-page-list-filter">FILTRO</div>
+      <div className="home-page-list-filter">
+        <FilterButtons></FilterButtons>
+      </div>
       <div className="home-page-list-cards">
         <ul>
           {beerList.map((item: BeerStructure) => (

@@ -16,9 +16,14 @@ export function useBeers(repo: BeerApiRepo) {
   };
 
   const loadBeers = useCallback(
-    async (pageChange: number = 0) => {
+    async (
+      pageChange: number = 0,
+      malt?: string,
+      brewed_after?: string,
+      brewed_before?: string
+    ) => {
       try {
-        const beerList = await repo.loadPublicBeers(pageChange);
+        const beerList = await repo.loadPublicBeers(pageChange, malt);
 
         dispatch(ac.loadBeersCreator(beerList));
       } catch (error) {
