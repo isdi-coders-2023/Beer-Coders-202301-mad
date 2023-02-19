@@ -1,7 +1,6 @@
 import { useContext, useEffect } from 'react';
 import { DetailedCard } from '../../detailsCard/detailsCard';
 import { PrivateBeersContext } from '../../context/private.beer.context';
-import CreateButton from '../../create.button/create.button';
 import { BeerStructure } from '../../models/beer';
 import './mybeers.scss';
 import { Link } from 'react-router-dom';
