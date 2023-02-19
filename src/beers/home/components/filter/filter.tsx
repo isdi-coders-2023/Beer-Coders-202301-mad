@@ -9,7 +9,7 @@ export default function FilterButtons() {
     loadBeers();
   }, [loadBeers]);
 
-  const filteredBeers = (): Beers => {
+  const filteredBeers = () => {
     loadBeers();
   };
 
