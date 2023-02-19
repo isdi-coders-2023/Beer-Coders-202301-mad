@@ -8,7 +8,7 @@ type DetailProps = {
 export default function DetailsPage({ detailBeer }: DetailProps) {
   return (
     <>
-      <h2>Details</h2>
+      <h2 className="main-card-title">Details</h2>
       <div className="main-card">
         <div className="info-img">
           <img src={detailBeer.image_url} alt={detailBeer.name} />

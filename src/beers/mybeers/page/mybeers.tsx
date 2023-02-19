@@ -17,7 +17,7 @@ export default function MyBeers() {
       <h2 className="title">My Beers</h2>
       <div className="create">
         <Link to="/create">
-          <button>+ Create your beer</button>
+          <button className="my-beers-edit-button">+ Create your beer</button>
         </Link>{' '}
       </div>
       <div className="card-detail">

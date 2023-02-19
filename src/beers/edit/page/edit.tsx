@@ -7,7 +7,7 @@ type EditProps = {
 export default function Edit({ editBeer }: EditProps) {
   return (
     <>
-      <h2>My Beers - Edit</h2>;
+      <h2 className="edit-main-title">My Beers - Edit</h2>;
     </>
   );
 }
