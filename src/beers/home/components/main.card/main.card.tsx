@@ -17,7 +17,7 @@ export function MainCard({ beer }: MainCardProps) {
   };
 
   const handlerDetailButton = (beer: BeerStructure) => {
-    <DetailsPage detailBeer={beer}></DetailsPage>;
+    return <DetailsPage detailBeer={beer}></DetailsPage>;
   };
 
   return (
