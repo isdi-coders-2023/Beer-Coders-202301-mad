@@ -1,0 +1,32 @@
+.filter-buttons {
+  display: flex;
+  flex-direction: row-reverse;
+  align-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  font-family: 'Inter' sans-serif;
+}
+
+@media screen and (min-width: 700px) {
+  .filter-button {
+    grid-template-columns: repeat(3, 1fr);
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .filter-button {
+    gap: 7rem;
+
+    & img {
+      height: 60px;
+      width: 60px;
+    }
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .filter-button {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5rem;
+  }
+}
