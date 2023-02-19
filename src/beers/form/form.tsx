@@ -38,7 +38,12 @@ export default function AddForm() {
         <div className="form-container">
           {showMessage && <div className="success-message">Beer added!</div>}
           <form className="add" onSubmit={handleSubmit}>
-            <input type="text" name="image" placeholder="image" required />
+            <input
+              type="text"
+              name="image_url"
+              placeholder="image_url"
+              required
+            />
             <input type="text" name="beerName" placeholder="Name" required />
             <input type="number" name="ibu" placeholder="IBU" required />
             <input
