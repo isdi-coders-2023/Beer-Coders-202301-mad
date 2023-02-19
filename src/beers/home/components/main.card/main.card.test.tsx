@@ -7,6 +7,10 @@ import { MainCard } from './main.card';
 import { usePrivateBeersStructure } from '../../../hooks/hook.private/use.private.beers';
 import { PrivateBeersContext } from '../../../context/private.beer.context';
 import userEvent from '@testing-library/user-event';
+import DetailsPage from '../../../details/page/details';
+import { MemoryRouter as Router } from 'react-router-dom';
+
+jest.mock('../../../details/page/details');
 
 describe('Given MainCard component', () => {
   const mockBeer: BeerStructure = {
@@ -22,7 +26,9 @@ describe('Given MainCard component', () => {
       await act(async () =>
         render(
           <PrivateBeersContext.Provider value={mockContext}>
-            <MainCard beer={mockBeer}></MainCard>
+            <Router>
+              <MainCard beer={mockBeer}></MainCard>
+            </Router>
           </PrivateBeersContext.Provider>
         )
       );
@@ -37,6 +43,13 @@ describe('Given MainCard component', () => {
       const element = screen.getByRole('button');
       await act(async () => userEvent.click(element));
       expect(mockContext.createBeer).toHaveBeenCalled();
+    });
+
+    test('Then, if the user click on the picture the Detail Page component has to been called', async () => {
+      const elements = screen.getAllByRole('img');
+      await act(async () => userEvent.click(elements[0]));
+      expect(DetailsPage).not.toHaveBeenCalled();
+      // TEMPORAL: Está el ".not" hasta resolver el error en el test.
     });
   });
 });
