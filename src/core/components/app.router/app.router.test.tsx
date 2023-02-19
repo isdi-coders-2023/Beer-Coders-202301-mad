@@ -6,6 +6,8 @@ import { AppRouter } from './app.router';
 import '@testing-library/jest-dom';
 import { UseBeersStructure } from '../../../beers/hooks/hook.public/use.beers';
 import { BeersContext } from '../../../beers/context/beers.context';
+import { PrivateBeersContext } from '../../../beers/context/private.beer.context';
+import { usePrivateBeersStructure } from '../../../beers/hooks/hook.private/use.private.beers';
 
 describe('Given AppRouter component', () => {
   const mockOptions: MenuOption[] = [
@@ -37,23 +39,33 @@ describe('Given AppRouter component', () => {
     beerList: [{ name: 'test' }],
   } as unknown as UseBeersStructure;
 
+  const mockPrivateContext = {
+    loadPrivateBeer: jest.fn(),
+    privateBeerList: [
+      { name: 'test', id: 1 },
+      { name: 'test', id: 2 },
+    ],
+  } as unknown as usePrivateBeersStructure;
+
   const prepareTestFunction = (number: number) => {
     render(
       <BeersContext.Provider value={mockContext}>
-        <Router
-          initialEntries={[
-            '/home',
-            '/about',
-            '/details',
-            '/anyText',
-            '/mybeers',
-            '/edit',
-            '/create',
-          ]}
-          initialIndex={number}
-        >
-          <AppRouter menuOptions={mockOptions}></AppRouter>
-        </Router>
+        <PrivateBeersContext.Provider value={mockPrivateContext}>
+          <Router
+            initialEntries={[
+              '/home',
+              '/about',
+              '/details',
+              '/anyText',
+              '/mybeers',
+              '/edit',
+              '/create',
+            ]}
+            initialIndex={number}
+          >
+            <AppRouter menuOptions={mockOptions}></AppRouter>
+          </Router>
+        </PrivateBeersContext.Provider>
       </BeersContext.Provider>
     );
   };
