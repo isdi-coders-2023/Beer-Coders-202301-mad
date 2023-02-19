@@ -27,3 +27,14 @@ export class ProtoBeer implements ProtoBeerStructure {
     this.isFavorite = false;
   }
 }
+
+export class ToCreateBeer implements ProtoBeerStructure {
+  constructor(
+    public image_url: string,
+    public name: string,
+    public ibu: number,
+    public abv: number,
+    public type: string,
+    public description: string
+  ) {}
+}
