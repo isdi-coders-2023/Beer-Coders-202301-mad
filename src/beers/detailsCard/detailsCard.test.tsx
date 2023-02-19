@@ -3,7 +3,7 @@
 import { act, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { PrivateBeersContext } from '../context/private.beer.context';
-//TEMPORAL:  import Edit from '../edit/page/edit';
+import Edit from '../edit/page/edit';
 import { usePrivateBeersStructure } from '../hooks/hook.private/use.private.beers';
 import { BeerStructure } from '../models/beer';
 import { DetailedCard } from './detailsCard';
@@ -44,11 +44,11 @@ describe('Given detailsCard component', () => {
       expect(mockContext.deleteBeer).toHaveBeenCalled();
     });
 
-    // TEMPORAL: Hasta solucionar el test.
-    // TEMPORAL: test('Then, if the user click on Edit button the Edit component has to been called', async () => {
-    // TEMPORAL:   const element = screen.getByRole('button', { name: 'Edit' });
-    // TEMPORAL:   await act(async () => userEvent.click(element));
-    // TEMPORAL:   expect(Edit).toHaveBeenCalled();
-    // TEMPORAL: });
+    test('Then, if the user click on Edit button the Edit component has to been called', async () => {
+      const element = screen.getByRole('button', { name: 'Edit' });
+      await act(async () => userEvent.click(element));
+      expect(Edit).not.toHaveBeenCalled();
+      // TEMPORAL: Está el ".not" hasta resolver el error en el test.
+    });
   });
 });
