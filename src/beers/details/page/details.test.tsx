@@ -1,26 +1,37 @@
-import { render, screen } from '@testing-library/react';
-// TEMPORAL: Hasta agregar detailsCard a Details
-// import { DetailedCard } from '../../detailsCard/detailsCard';
-import DetailsPage from './details';
+/* eslint-disable testing-library/no-unnecessary-act */
+/* eslint-disable testing-library/no-render-in-setup */
+import { act, render, screen } from '@testing-library/react';
+import { BeersContext } from '../../context/beers.context';
+import { UseBeersStructure } from '../../hooks/hook.public/use.beers';
+import Details from './details';
+import { MemoryRouter as Router } from 'react-router-dom';
 
-// TEMPORAL: Hasta agregar detailsCard a Details
-// jest.mock('../../../beers/detailsCard/detailsCard');
+const mockContext = {
+  beerList: [
+    { name: 'test', id: 1 },
+    { name: 'test', id: 2 },
+  ],
+} as unknown as UseBeersStructure;
 
 describe('Given Details page component', () => {
-  describe('When we are trying to render the component', () => {
-    test('Then it should render the Details text', () => {
-      render(<DetailsPage detailBeer></DetailsPage>);
-      const text = 'Details';
-      const element = screen.getByText(text);
+  describe('When we render the component', () => {
+    test('Then, the heading <h2> "Details of " should be in the document', async () => {
+      await act(async () =>
+        render(
+          <BeersContext.Provider value={mockContext}>
+            <Router
+              initialEntries={['/details/1', '/details/3']}
+              initialIndex={0}
+            >
+              <Details></Details>
+            </Router>
+          </BeersContext.Provider>
+        )
+      );
+
+      const element = screen.getByRole('heading');
+
       expect(element).toBeInTheDocument();
     });
-
-    // TEMPORAL: Hasta agregar detailsCard a Details
-    // TEMPORAL: describe('When we are rendering the component', () => {
-    // TEMPORAL:   test('It should call the detailsCard component', () => {
-    // TEMPORAL:     render(<DetailsPage></DetailsPage>);
-    // TEMPORAL:     expect(DetailedCard).toHaveBeenCalled();
-    // TEMPORAL:   });
-    // TEMPORAL: });
   });
 });

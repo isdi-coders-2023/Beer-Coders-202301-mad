@@ -21,7 +21,7 @@ export function DetailedCard({ beer }: DetailedCardProps) {
   };
 
   return (
-    <div className="main-card">
+    <div className="details-card">
       <div className="info-img">
         <img src={beer.image_url} alt={beer.name} />
         <button

@@ -22,6 +22,7 @@ export class BeerApiRepo {
     const beersPerPage = '&per_page=20';
 
     this.actualPage = this.actualPage + pageChange;
+
     if (malt === undefined) malt = '';
 
     if (this.actualPage === 0) this.actualPage = 1;
