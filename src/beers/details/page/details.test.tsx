@@ -9,7 +9,7 @@ import DetailsPage from './details';
 describe('Given Details page component', () => {
   describe('When we are trying to render the component', () => {
     test('Then it should render the Details text', () => {
-      render(<DetailsPage detailBeer></DetailsPage>);
+      render(<DetailsPage></DetailsPage>);
       const text = 'Details';
       const element = screen.getByText(text);
       expect(element).toBeInTheDocument();

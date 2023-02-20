@@ -16,12 +16,7 @@ export function useBeers(repo: BeerApiRepo) {
   };
 
   const loadBeers = useCallback(
-    async (
-      pageChange: number = 0,
-      malt?: string,
-      brewed_after?: string,
-      brewed_before?: string
-    ) => {
+    async (pageChange: number = 0, malt?: string) => {
       try {
         const beerList = await repo.loadPublicBeers(pageChange, malt);
 
