@@ -1,10 +1,11 @@
-.main-card {
+.details-card {
   display: flex;
   flex-direction: row;
   align-items: center;
   border-radius: 1rem;
   background-color: rgb(205, 242, 173, 100%);
   max-width: 400px;
+  height: 400px;
 
   & .info-img {
     display: flex;

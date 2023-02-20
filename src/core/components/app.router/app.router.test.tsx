@@ -36,7 +36,10 @@ describe('Given AppRouter component', () => {
 
   const mockContext = {
     loadBeers: jest.fn(),
-    beerList: [{ name: 'test' }],
+    beerList: [
+      { name: 'test', id: 1 },
+      { name: 'test', id: 2 },
+    ],
   } as unknown as UseBeersStructure;
 
   const mockPrivateContext = {
@@ -55,7 +58,7 @@ describe('Given AppRouter component', () => {
             initialEntries={[
               '/home',
               '/about',
-              '/details',
+              '/details/1',
               '/anyText',
               '/mybeers',
               '/edit',
@@ -91,9 +94,7 @@ describe('Given AppRouter component', () => {
   describe('When it is render the Details page', () => {
     test('Then, it should render the Details component', async () => {
       await waitFor(async () => prepareTestFunction(2));
-      const element = await screen.findByRole('heading', {
-        name: 'Details',
-      });
+      const element = await screen.findByText('Details of test');
       expect(element).toBeInTheDocument();
     });
   });
