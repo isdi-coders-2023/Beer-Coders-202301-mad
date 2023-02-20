@@ -6,8 +6,6 @@ import { DetailedCard } from '../../detailsCard/detailsCard';
 import { usePrivateBeersStructure } from '../../hooks/hook.private/use.private.beers';
 import MyBeers from './mybeers';
 
-jest.mock('../../detailsCard/detailsCard');
-
 const mockContext = {
   loadPrivateBeer: jest.fn(),
   privateBeerList: [
@@ -16,8 +14,10 @@ const mockContext = {
   ],
 } as unknown as usePrivateBeersStructure;
 
+jest.mock('../../detailsCard/detailsCard');
+
 describe('Given MyBeers component', () => {
-  describe('When it is render', () => {
+  describe('When the component is render', () => {
     beforeEach(async () => {
       await act(async () =>
         render(
@@ -28,7 +28,7 @@ describe('Given MyBeers component', () => {
       );
     });
 
-    test('Then it should have the My Beers in the screen', () => {
+    test('Then it should have the My Beers in the document', () => {
       expect(DetailedCard).toHaveBeenCalled();
     });
   });
